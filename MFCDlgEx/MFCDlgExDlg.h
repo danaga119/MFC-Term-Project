@@ -4,6 +4,7 @@
 #include "CTypeDB.h"
 #include <vtkSmartPointer.h>
 #include <vtkCamera.h>
+
 class vtkRenderWindow;
 
 class CMFCDlgExDlg : public CDialogEx
@@ -59,7 +60,6 @@ protected:
 
     void UpdateBookSummary();
     void UpdateSheetSummary(int nSheet);
-
 
     DECLARE_MESSAGE_MAP()
 public:
