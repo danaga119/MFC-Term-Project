@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{1C181358-6602-4ED2-86A7-A9E1E329BF07}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>MFCDlgEx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="vtk_debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\VTK\install\include\vtk-9.1;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\VTK\install\lib;D:\libraries\VTK\Debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vtkCommonCore-9.1.lib;vtkCommonDataModel-9.1.lib;vtkCommonMath-9.1.lib;vtkCommonTransforms-9.1.lib;vtkFiltersCore-9.1.lib;vtkFiltersSources-9.1.lib;vtkRenderingCore-9.1.lib;vtkRenderingOpenGL2-9.1.lib;vtkInteractionStyle-9.1.lib;vtkRenderingFreeType-9.1.lib;opengl32.lib;vtkcgns-9.1d.lib;vtkChartsCore-9.1d.lib;vtkCommonColor-9.1d.lib;vtkCommonComputationalGeometry-9.1d.lib;vtkCommonCore-9.1d.lib;vtkCommonDataModel-9.1d.lib;vtkCommonExecutionModel-9.1d.lib;vtkCommonMath-9.1d.lib;vtkCommonMisc-9.1d.lib;vtkCommonPython-9.1d.lib;vtkCommonSystem-9.1d.lib;vtkCommonTransforms-9.1d.lib;vtkDICOMParser-9.1d.lib;vtkDomainsChemistry-9.1d.lib;vtkDomainsChemistryOpenGL2-9.1d.lib;vtkdoubleconversion-9.1d.lib;vtkexodusII-9.1d.lib;vtkexpat-9.1d.lib;vtkFiltersAMR-9.1d.lib;vtkFiltersCore-9.1d.lib;vtkFiltersExtraction-9.1d.lib;vtkFiltersFlowPaths-9.1d.lib;vtkFiltersGeneral-9.1d.lib;vtkFiltersGeneric-9.1d.lib;vtkFiltersGeometry-9.1d.lib;vtkFiltersHybrid-9.1d.lib;vtkFiltersHyperTree-9.1d.lib;vtkFiltersImaging-9.1d.lib;vtkFiltersModeling-9.1d.lib;vtkFiltersParallel-9.1d.lib;vtkFiltersParallelImaging-9.1d.lib;vtkFiltersPoints-9.1d.lib;vtkFiltersProgrammable-9.1d.lib;vtkFiltersPython-9.1d.lib;vtkFiltersSelection-9.1d.lib;vtkFiltersSMP-9.1d.lib;vtkFiltersSources-9.1d.lib;vtkFiltersStatistics-9.1d.lib;vtkFiltersTexture-9.1d.lib;vtkFiltersTopology-9.1d.lib;vtkFiltersVerdict-9.1d.lib;vtkfmt-9.1d.lib;vtkfreetype-9.1d.lib;vtkGeovisCore-9.1d.lib;vtkgl2ps-9.1d.lib;vtkglew-9.1d.lib;vtkhdf5-9.1d.lib;vtkhdf5_hl-9.1d.lib;vtkImagingColor-9.1d.lib;vtkImagingCore-9.1d.lib;vtkImagingFourier-9.1d.lib;vtkImagingGeneral-9.1d.lib;vtkImagingHybrid-9.1d.lib;vtkImagingMath-9.1d.lib;vtkImagingMorphological-9.1d.lib;vtkImagingSources-9.1d.lib;vtkImagingStatistics-9.1d.lib;vtkImagingStencil-9.1d.lib;vtkInfovisCore-9.1d.lib;vtkInfovisLayout-9.1d.lib;vtkInteractionImage-9.1d.lib;vtkInteractionStyle-9.1d.lib;vtkInteractionWidgets-9.1d.lib;vtkIOAMR-9.1d.lib;vtkIOAsynchronous-9.1d.lib;vtkIOCGNSReader-9.1d.lib;vtkIOChemistry-9.1d.lib;vtkIOCityGML-9.1d.lib;vtkIOCONVERGECFD-9.1d.lib;vtkIOCore-9.1d.lib;vtkIOEnSight-9.1d.lib;vtkIOExodus-9.1d.lib;vtkIOExport-9.1d.lib;vtkIOExportGL2PS-9.1d.lib;vtkIOExportPDF-9.1d.lib;vtkIOGeometry-9.1d.lib;vtkIOHDF-9.1d.lib;vtkIOImage-9.1d.lib;vtkIOImport-9.1d.lib;vtkIOInfovis-9.1d.lib;vtkIOIOSS-9.1d.lib;vtkIOLegacy-9.1d.lib;vtkIOLSDyna-9.1d.lib;vtkIOMINC-9.1d.lib;vtkIOMotionFX-9.1d.lib;vtkIOMovie-9.1d.lib;vtkIONetCDF-9.1d.lib;vtkIOOggTheora-9.1d.lib;vtkIOParallel-9.1d.lib;vtkIOParallelXML-9.1d.lib;vtkIOPLY-9.1d.lib;vtkIOSegY-9.1d.lib;vtkIOSQL-9.1d.lib;vtkioss-9.1d.lib;vtkIOTecplotTable-9.1d.lib;vtkIOVeraOut-9.1d.lib;vtkIOVideo-9.1d.lib;vtkIOXML-9.1d.lib;vtkIOXMLParser-9.1d.lib;vtkjpeg-9.1d.lib;vtkjsoncpp-9.1d.lib;vtkkissfft-9.1d.lib;vtklibharu-9.1d.lib;vtklibproj-9.1d.lib;vtklibxml2-9.1d.lib;vtkloguru-9.1d.lib;vtklz4-9.1d.lib;vtklzma-9.1d.lib;vtkmetaio-9.1d.lib;vtknetcdf-9.1d.lib;vtkogg-9.1d.lib;vtkParallelCore-9.1d.lib;vtkParallelDIY-9.1d.lib;vtkpng-9.1d.lib;vtkpugixml-9.1d.lib;vtkPythonContext2D-9.1d.lib;vtkPythonInterpreter-9.1d.lib;vtkRenderingAnnotation-9.1d.lib;vtkRenderingContext2D-9.1d.lib;vtkRenderingContextOpenGL2-9.1d.lib;vtkRenderingCore-9.1d.lib;vtkRenderingFreeType-9.1d.lib;vtkRenderingGL2PSOpenGL2-9.1d.lib;vtkRenderingImage-9.1d.lib;vtkRenderingLabel-9.1d.lib;vtkRenderingLOD-9.1d.lib;vtkRenderingOpenGL2-9.1d.lib;vtkRenderingSceneGraph-9.1d.lib;vtkRenderingUI-9.1d.lib;vtkRenderingVolume-9.1d.lib;vtkRenderingVolumeOpenGL2-9.1d.lib;vtkRenderingVtkJS-9.1d.lib;vtksqlite-9.1d.lib;vtksys-9.1d.lib;vtkTestingRendering-9.1d.lib;vtktheora-9.1d.lib;vtktiff-9.1d.lib;vtkverdict-9.1d.lib;vtkViewsContext2D-9.1d.lib;vtkViewsCore-9.1d.lib;vtkViewsInfovis-9.1d.lib;vtkWrappingPythonCore3.8-9.1d.lib;vtkWrappingTools-9.1d.lib;vtkzlib-9.1d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>vtkcgns-9.1d.dll;vtkChartsCore-9.1d.dll;vtkCommonColor-9.1d.dll;vtkCommonComputationalGeometry-9.1d.dll;vtkCommonCore-9.1d.dll;vtkCommonDataModel-9.1d.dll;vtkCommonExecutionModel-9.1d.dll;vtkCommonMath-9.1d.dll;vtkCommonMisc-9.1d.dll;vtkCommonPython-9.1d.dll;vtkCommonSystem-9.1d.dll;vtkCommonTransforms-9.1d.dll;vtkDICOMParser-9.1d.dll;vtkDomainsChemistry-9.1d.dll;vtkDomainsChemistryOpenGL2-9.1d.dll;vtkdoubleconversion-9.1d.dll;vtkexodusII-9.1d.dll;vtkexpat-9.1d.dll;vtkFiltersAMR-9.1d.dll;vtkFiltersCore-9.1d.dll;vtkFiltersExtraction-9.1d.dll;vtkFiltersFlowPaths-9.1d.dll;vtkFiltersGeneral-9.1d.dll;vtkFiltersGeneric-9.1d.dll;vtkFiltersGeometry-9.1d.dll;vtkFiltersHybrid-9.1d.dll;vtkFiltersHyperTree-9.1d.dll;vtkFiltersImaging-9.1d.dll;vtkFiltersModeling-9.1d.dll;vtkFiltersParallel-9.1d.dll;vtkFiltersParallelImaging-9.1d.dll;vtkFiltersPoints-9.1d.dll;vtkFiltersProgrammable-9.1d.dll;vtkFiltersPython-9.1d.dll;vtkFiltersSelection-9.1d.dll;vtkFiltersSMP-9.1d.dll;vtkFiltersSources-9.1d.dll;vtkFiltersStatistics-9.1d.dll;vtkFiltersTexture-9.1d.dll;vtkFiltersTopology-9.1d.dll;vtkFiltersVerdict-9.1d.dll;vtkfmt-9.1d.dll;vtkfreetype-9.1d.dll;vtkGeovisCore-9.1d.dll;vtkgl2ps-9.1d.dll;vtkglew-9.1d.dll;vtkhdf5-9.1d.dll;vtkhdf5_hl-9.1d.dll;vtkImagingColor-9.1d.dll;vtkImagingCore-9.1d.dll;vtkImagingFourier-9.1d.dll;vtkImagingGeneral-9.1d.dll;vtkImagingHybrid-9.1d.dll;vtkImagingMath-9.1d.dll;vtkImagingMorphological-9.1d.dll;vtkImagingSources-9.1d.dll;vtkImagingStatistics-9.1d.dll;vtkImagingStencil-9.1d.dll;vtkInfovisCore-9.1d.dll;vtkInfovisLayout-9.1d.dll;vtkInteractionImage-9.1d.dll;vtkInteractionStyle-9.1d.dll;vtkInteractionWidgets-9.1d.dll;vtkIOAMR-9.1d.dll;vtkIOAsynchronous-9.1d.dll;vtkIOCGNSReader-9.1d.dll;vtkIOChemistry-9.1d.dll;vtkIOCityGML-9.1d.dll;vtkIOCONVERGECFD-9.1d.dll;vtkIOCore-9.1d.dll;vtkIOEnSight-9.1d.dll;vtkIOExodus-9.1d.dll;vtkIOExport-9.1d.dll;vtkIOExportGL2PS-9.1d.dll;vtkIOExportPDF-9.1d.dll;vtkIOGeometry-9.1d.dll;vtkIOHDF-9.1d.dll;vtkIOImage-9.1d.dll;vtkIOImport-9.1d.dll;vtkIOInfovis-9.1d.dll;vtkIOIOSS-9.1d.dll;vtkIOLegacy-9.1d.dll;vtkIOLSDyna-9.1d.dll;vtkIOMINC-9.1d.dll;vtkIOMotionFX-9.1d.dll;vtkIOMovie-9.1d.dll;vtkIONetCDF-9.1d.dll;vtkIOOggTheora-9.1d.dll;vtkIOParallel-9.1d.dll;vtkIOParallelXML-9.1d.dll;vtkIOPLY-9.1d.dll;vtkIOSegY-9.1d.dll;vtkIOSQL-9.1d.dll;vtkioss-9.1d.dll;vtkIOTecplotTable-9.1d.dll;vtkIOVeraOut-9.1d.dll;vtkIOVideo-9.1d.dll;vtkIOXML-9.1d.dll;vtkIOXMLParser-9.1d.dll;vtkjpeg-9.1d.dll;vtkjsoncpp-9.1d.dll;vtkkissfft-9.1d.dll;vtklibharu-9.1d.dll;vtklibproj-9.1d.dll;vtklibxml2-9.1d.dll;vtkloguru-9.1d.dll;vtklz4-9.1d.dll;vtklzma-9.1d.dll;vtkmetaio-9.1d.dll;vtknetcdf-9.1d.dll;vtkogg-9.1d.dll;vtkParallelCore-9.1d.dll;vtkParallelDIY-9.1d.dll;vtkpng-9.1d.dll;vtkpugixml-9.1d.dll;vtkPythonContext2D-9.1d.dll;vtkPythonInterpreter-9.1d.dll;vtkRenderingAnnotation-9.1d.dll;vtkRenderingContext2D-9.1d.dll;vtkRenderingContextOpenGL2-9.1d.dll;vtkRenderingCore-9.1d.dll;vtkRenderingFreeType-9.1d.dll;vtkRenderingGL2PSOpenGL2-9.1d.dll;vtkRenderingImage-9.1d.dll;vtkRenderingLabel-9.1d.dll;vtkRenderingLOD-9.1d.dll;vtkRenderingOpenGL2-9.1d.dll;vtkRenderingSceneGraph-9.1d.dll;vtkRenderingUI-9.1d.dll;vtkRenderingVolume-9.1d.dll;vtkRenderingVolumeOpenGL2-9.1d.dll;vtkRenderingVtkJS-9.1d.dll;vtksqlite-9.1d.dll;vtksys-9.1d.dll;vtkTestingRendering-9.1d.dll;vtktheora-9.1d.dll;vtktiff-9.1d.dll;vtkverdict-9.1d.dll;vtkViewsContext2D-9.1d.dll;vtkViewsCore-9.1d.dll;vtkViewsInfovis-9.1d.dll;vtkWrappingPythonCore3.8-9.1d.dll;vtkWrappingTools-9.1d.dll;vtkzlib-9.1d.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\VTK\install\include\vtk-9.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>vtkcgns-9.5.lib;vtkChartsCore-9.5.lib;vtkCommonColor-9.5.lib;vtkCommonComputationalGeometry-9.5.lib;vtkCommonCore-9.5.lib;vtkCommonDataModel-9.5.lib;vtkCommonExecutionModel-9.5.lib;vtkCommonMath-9.5.lib;vtkCommonMisc-9.5.lib;vtkCommonSystem-9.5.lib;vtkCommonTransforms-9.5.lib;vtkDICOMParser-9.5.lib;vtkDomainsChemistry-9.5.lib;vtkDomainsChemistryOpenGL2-9.5.lib;vtkdoubleconversion-9.5.lib;vtkexodusII-9.5.lib;vtkexpat-9.5.lib;vtkFiltersAMR-9.5.lib;vtkFiltersCellGrid-9.5.lib;vtkFiltersCore-9.5.lib;vtkFiltersExtraction-9.5.lib;vtkFiltersFlowPaths-9.5.lib;vtkFiltersGeneral-9.5.lib;vtkFiltersGeneric-9.5.lib;vtkFiltersGeometry-9.5.lib;vtkFiltersGeometryPreview-9.5.lib;vtkFiltersHybrid-9.5.lib;vtkFiltersHyperTree-9.5.lib;vtkFiltersImaging-9.5.lib;vtkFiltersModeling-9.5.lib;vtkFiltersParallel-9.5.lib;vtkFiltersParallelImaging-9.5.lib;vtkFiltersPoints-9.5.lib;vtkFiltersProgrammable-9.5.lib;vtkFiltersReduction-9.5.lib;vtkFiltersSelection-9.5.lib;vtkFiltersSMP-9.5.lib;vtkFiltersSources-9.5.lib;vtkFiltersStatistics-9.5.lib;vtkFiltersTemporal-9.5.lib;vtkFiltersTensor-9.5.lib;vtkFiltersTexture-9.5.lib;vtkFiltersTopology-9.5.lib;vtkFiltersVerdict-9.5.lib;vtkfmt-9.5.lib;vtkfreetype-9.5.lib;vtkGeovisCore-9.5.lib;vtkgl2ps-9.5.lib;vtkglad-9.5.lib;vtkhdf5-9.5.lib;vtkhdf5_hl-9.5.lib;vtkImagingColor-9.5.lib;vtkImagingCore-9.5.lib;vtkImagingFourier-9.5.lib;vtkImagingGeneral-9.5.lib;vtkImagingHybrid-9.5.lib;vtkImagingMath-9.5.lib;vtkImagingMorphological-9.5.lib;vtkImagingSources-9.5.lib;vtkImagingStatistics-9.5.lib;vtkImagingStencil-9.5.lib;vtkInfovisCore-9.5.lib;vtkInfovisLayout-9.5.lib;vtkInteractionImage-9.5.lib;vtkInteractionStyle-9.5.lib;vtkInteractionWidgets-9.5.lib;vtkIOAMR-9.5.lib;vtkIOAsynchronous-9.5.lib;vtkIOCellGrid-9.5.lib;vtkIOCesium3DTiles-9.5.lib;vtkIOCGNSReader-9.5.lib;vtkIOChemistry-9.5.lib;vtkIOCityGML-9.5.lib;vtkIOCONVERGECFD-9.5.lib;vtkIOCore-9.5.lib;vtkIOEngys-9.5.lib;vtkIOEnSight-9.5.lib;vtkIOERF-9.5.lib;vtkIOExodus-9.5.lib;vtkIOExport-9.5.lib;vtkIOExportGL2PS-9.5.lib;vtkIOExportPDF-9.5.lib;vtkIOFDS-9.5.lib;vtkIOFLUENTCFF-9.5.lib;vtkIOGeometry-9.5.lib;vtkIOHDF-9.5.lib;vtkIOImage-9.5.lib;vtkIOImport-9.5.lib;vtkIOInfovis-9.5.lib;vtkIOIOSS-9.5.lib;vtkIOLANLX3D-9.5.lib;vtkIOLegacy-9.5.lib;vtkIOLSDyna-9.5.lib;vtkIOMINC-9.5.lib;vtkIOMotionFX-9.5.lib;vtkIOMovie-9.5.lib;vtkIONetCDF-9.5.lib;vtkIOOggTheora-9.5.lib;vtkIOParallel-9.5.lib;vtkIOParallelXML-9.5.lib;vtkIOPLY-9.5.lib;vtkIOSegY-9.5.lib;vtkIOSQL-9.5.lib;vtkioss-9.5.lib;vtkIOTecplotTable-9.5.lib;vtkIOVeraOut-9.5.lib;vtkIOVideo-9.5.lib;vtkIOXML-9.5.lib;vtkIOXMLParser-9.5.lib;vtkjpeg-9.5.lib;vtkjsoncpp-9.5.lib;vtkkissfft-9.5.lib;vtklibharu-9.5.lib;vtklibproj-9.5.lib;vtklibxml2-9.5.lib;vtkloguru-9.5.lib;vtklz4-9.5.lib;vtklzma-9.5.lib;vtkmetaio-9.5.lib;vtknetcdf-9.5.lib;vtkogg-9.5.lib;vtkParallelCore-9.5.lib;vtkParallelDIY-9.5.lib;vtkpng-9.5.lib;vtkpugixml-9.5.lib;vtkRenderingAnnotation-9.5.lib;vtkRenderingCellGrid-9.5.lib;vtkRenderingContext2D-9.5.lib;vtkRenderingContextOpenGL2-9.5.lib;vtkRenderingCore-9.5.lib;vtkRenderingFreeType-9.5.lib;vtkRenderingGL2PSOpenGL2-9.5.lib;vtkRenderingGridAxes-9.5.lib;vtkRenderingHyperTreeGrid-9.5.lib;vtkRenderingImage-9.5.lib;vtkRenderingLabel-9.5.lib;vtkRenderingLICOpenGL2-9.5.lib;vtkRenderingLOD-9.5.lib;vtkRenderingOpenGL2-9.5.lib;vtkRenderingSceneGraph-9.5.lib;vtkRenderingUI-9.5.lib;vtkRenderingVolume-9.5.lib;vtkRenderingVolumeOpenGL2-9.5.lib;vtkRenderingVtkJS-9.5.lib;vtksqlite-9.5.lib;vtksys-9.5.lib;vtkTestingCore-9.5.lib;vtkTestingRendering-9.5.lib;vtktheora-9.5.lib;vtktiff-9.5.lib;vtktoken-9.5.lib;vtkverdict-9.5.lib;vtkViewsContext2D-9.5.lib;vtkViewsCore-9.5.lib;vtkViewsInfovis-9.5.lib;vtkWrappingTools-9.5.lib;vtkzlib-9.5.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\VTK\install\lib</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CTypeDB.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="MFCDlgEx.h" />
+    <ClInclude Include="MFCDlgExDlg.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CTypeDB.cpp" />
+    <ClCompile Include="MFCDlgEx.cpp" />
+    <ClCompile Include="MFCDlgExDlg.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MFCDlgEx.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MFCDlgEx.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MFCDlgEx.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
